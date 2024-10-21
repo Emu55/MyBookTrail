@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>MyBookTrail</title>
+</head>
+
+<body>
+    <nav class="appbar">
+        <div class="logo">MyBookTrail</div>
+        <div class="hamburger" onclick="openSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <div id="mySidebar" class="sidebar"><br>
+        <div class="menu-links">
+            <a href="home.html">Home</a>
+            <hr>
+            <a href="addBook.html">Add Book</a>
+            <hr>
+            <a href="about.html">About</a>
+            <hr>
+            <a href="#">Contact</a>
+            <hr>
+            <a href="javascript:void(0)" onclick="closeSidebar()">Close</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="form-content">
+            <h2>Add a New Book</h2>
+            <hr>
+            <form id="addBookForm" class="form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" placeholder="Enter book title" required>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" class="form-control" id="author" placeholder="Enter book author" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (1-5):</label>
+                    <select class="form-control" id="rating" required>
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                </div>
+                <div style="padding-top: 20px;">
+                    <button type="submit" class="add-btn">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+        // Open the sidebar
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px"; // Open the sidebar
+            document.getElementById("main-content").style.marginRight = "250px"; // Push content
+        }
+
+        // Close the sidebar
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0"; // Close the sidebar
+            document.getElementById("main-content").style.marginRight = "0"; // Reset content
+        }
+
+    </script>
+</body>
+
+</html>

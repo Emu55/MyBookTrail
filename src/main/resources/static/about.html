@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>MyBookTrail</title>
+</head>
+
+<body>
+    <nav class="appbar">
+        <div class="logo">MyBookTrail</div>
+        <div class="hamburger" onclick="openSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <div id="mySidebar" class="sidebar"><br>
+        <div class="menu-links">
+            <a href="home.html">Home</a>
+            <hr>
+            <a href="addBook.html">Add Book</a>
+            <hr>
+            <a href="about.html">About</a>
+            <hr>
+            <a href="#">Contact</a>
+            <hr>
+            <a href="javascript:void(0)" onclick="closeSidebar()">Close</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>About Us</h1>
+        <hr class="under-title">
+        <div>
+            <h2>Overview of MyBookTrail</h2>
+            <p style="padding: 10px;">
+                MyBookTrail is your personal library where you can track, organize, and manage the books you love.
+                Whether
+                you're building a reading list, keeping a record of your favorite titles, or curating a collection,
+                MyBookTrail helps you stay connected with your literary journey.
+            </p>
+        </div>
+        <br>
+        <div>
+            <h2>Why Use MyBookTrail?</h2>
+            <p style="padding: 10px;">
+                Keep track of every book you've read, create a wishlist for future reads, and organize your books into
+                your
+                personal virtual library. MyBookTrail is designed for book lovers who want an easy, beautiful way to
+                manage
+                their reading journey.
+            </p>
+        </div>
+        <br>
+        <div>
+            <h2>How It Works</h2>
+            <p style="padding: 10px;">
+                Add books to your collection, organize them, and manage your library. Whether you're an avid reader or
+                someone looking to track your reading journey, MyBookTrail makes it easy to curate your personal
+                booklist.
+            </p>
+        </div>
+        <br>
+        <div>
+            <h2>Features</h2>
+            <ul style="padding: 10px;">
+
+                <li>Easily Add New Books: Seamlessly expand your personal library by adding new titles with just a few
+                    clicks.</li>
+                <li>Manage Your Collection: Effortlessly update or remove books from your collection, keeping your
+                    library perfectly curated.</li>
+                <li>Browse Your Entire Collection: View your entire book list in an organized, user-friendly format
+                    designed for quick access.</li>
+                <li>Elegant and Intuitive Design: Enjoy a sleek, minimalist interface crafted to enhance your reading
+                    journey without distractions.</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+        // Open the sidebar
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main-content").style.marginRight = "250px";
+        }
+
+        // Close the sidebar
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main-content").style.marginRight = "0";
+        }
+
+    </script>
+</body>
+
+</html>
